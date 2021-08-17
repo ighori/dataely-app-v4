@@ -1,0 +1,51 @@
+{
+  "name": "TableRelationship",
+  "fields": [
+    {
+      "fieldName": "source",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "target",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sourceKey",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "targetKey",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "creationDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastUpdated",
+      "fieldType": "Instant"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "tablesDefinition",
+      "otherEntityRelationshipName": "tableRelationship",
+      "relationshipName": "tablesDefinition",
+      "otherEntityField": "tableName"
+    }
+  ],
+  "entityTableName": "table_relationship",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "dataelyApp",
+  "clientRootFolder": "dataelyApp",
+  "databaseType": "sql",
+  "changelogDate": "20210817233931"
+}

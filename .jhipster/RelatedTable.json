@@ -1,0 +1,40 @@
+{
+  "name": "RelatedTable",
+  "fields": [
+    {
+      "fieldName": "tableName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "creationDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastUpdated",
+      "fieldType": "Instant"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "tablesDefinition",
+      "otherEntityRelationshipName": "relatedTable",
+      "relationshipName": "tablesDefinition",
+      "otherEntityField": "tableName"
+    }
+  ],
+  "entityTableName": "related_table",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "dataelyApp",
+  "clientRootFolder": "dataelyApp",
+  "databaseType": "sql",
+  "changelogDate": "20210817233932"
+}
